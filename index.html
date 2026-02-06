@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Rose Day Beb💗</title>
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff416c,#ff4b2b);
+font-family:Segoe UI;
+overflow:hidden;
+color:white;
+}
+.container{
+background:rgba(255,255,255,0.15);
+padding:30px;
+border-radius:25px;
+text-align:center;
+backdrop-filter:blur(10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+z-index:2;
+}
+.rose{font-size:70px;}
+.name{font-size:26px;font-weight:bold;margin:10px 0;}
+.footer{margin-top:15px;font-style:italic;font-size:14px;}
+.heart{
+position:fixed;
+top:-10px;
+font-size:20px;
+animation:fall linear infinite;
+}
+@keyframes fall{
+to{transform:translateY(110vh);opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<div class="container">
+<div class="rose">🌹</div>
+<h2>Happy Rose Day</h2>
+<div class="name">Beb💗</div>
+<p>
+माझ्या आयुष्यातील सर्वात सुंदर गुलाब तूच आहेस ❤️<br><br>
+तुझ्या हसण्यात माझं सुख आहे,<br>
+आणि तुझ्या प्रेमात माझं संपूर्ण जग 💖
+</p>
+<div class="footer">Created with ❤️ by Parth</div>
+</div>
+
+<script>
+for(let i=0;i<30;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(3+Math.random()*5)+"s";
+document.body.appendChild(h);
+}
+</script>
+
+</body>
+</html>
