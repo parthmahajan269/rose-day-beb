@@ -2,70 +2,125 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy Rose Day Beb💗</title>
+<title>Happy Rose Day</title>
+
+<!-- Premium Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-margin:0;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#ff416c,#ff4b2b);
-font-family:Segoe UI;
-overflow:hidden;
-color:white;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:radial-gradient(circle at top,#fbc2eb,#a18cd1);
+  font-family:'Inter', sans-serif;
+  overflow:hidden;
 }
-.container{
-background:rgba(255,255,255,0.15);
-padding:30px;
-border-radius:25px;
-text-align:center;
-backdrop-filter:blur(10px);
-box-shadow:0 20px 40px rgba(0,0,0,0.4);
-z-index:2;
+
+/* subtle animated background glow */
+body::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.2),transparent);
+  animation:shine 6s infinite linear;
 }
-.rose{font-size:70px;}
-.name{font-size:26px;font-weight:bold;margin:10px 0;}
-.footer{margin-top:15px;font-style:italic;font-size:14px;}
-.heart{
-position:fixed;
-top:-10px;
-font-size:20px;
-animation:fall linear infinite;
+@keyframes shine{
+  from{transform:translateX(-100%);}
+  to{transform:translateX(100%);}
 }
-@keyframes fall{
-to{transform:translateY(110vh);opacity:0;}
+
+.card{
+  background:rgba(255,255,255,0.92);
+  padding:50px 45px;
+  max-width:430px;
+  text-align:center;
+  border-radius:22px;
+  box-shadow:0 40px 80px rgba(0,0,0,0.25);
+  animation:cardEnter 1.4s ease;
+  position:relative;
+  z-index:1;
+}
+
+@keyframes cardEnter{
+  from{opacity:0; transform:scale(0.92) translateY(20px);}
+  to{opacity:1; transform:scale(1) translateY(0);}
+}
+
+.rose{
+  font-size:38px;
+  margin-bottom:20px;
+  animation:float 3s ease-in-out infinite;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
+}
+
+h1{
+  font-family:'Playfair Display', serif;
+  font-size:28px;
+  margin-bottom:25px;
+  color:#2b2b2b;
+}
+
+p{
+  font-size:16px;
+  line-height:1.8;
+  color:#444;
+}
+
+.divider{
+  width:70px;
+  height:2px;
+  background:#c77dff;
+  margin:28px auto;
+}
+
+.signature{
+  margin-top:30px;
+  font-family:'Playfair Display', serif;
+  font-size:15px;
+  color:#666;
+}
+
+.signature span{
+  display:block;
+  margin-top:6px;
+  font-size:13px;
+  opacity:0.7;
 }
 </style>
 </head>
+
 <body>
 
-<audio autoplay loop>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-</audio>
+<div class="card">
+  <div class="rose">🌹</div>
 
-<div class="container">
-<div class="rose">🌹</div>
-<h2>Happy Rose Day</h2>
-<div class="name">Beb💗</div>
-<p>
-माझ्या आयुष्यातील सर्वात सुंदर गुलाब तूच आहेस ❤️<br><br>
-तुझ्या हसण्यात माझं सुख आहे,<br>
-आणि तुझ्या प्रेमात माझं संपूर्ण जग 💖
-</p>
-<div class="footer">Created with ❤️ by Parth</div>
+  <h1>Happy Rose Day</h1>
+
+  <p>
+    Some people attract attention.<br>
+    Some people earn respect.
+  </p>
+
+  <div class="divider"></div>
+
+  <p>
+    Your thoughts, clarity,<br>
+    and intelligence<br>
+    make you truly exceptional.
+  </p>
+
+  <div class="signature">
+    – Parth
+    <span>crafted, not copied</span>
+  </div>
 </div>
-
-<script>
-for(let i=0;i<30;i++){
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤️";
-h.style.left=Math.random()*100+"vw";
-h.style.animationDuration=(3+Math.random()*5)+"s";
-document.body.appendChild(h);
-}
-</script>
 
 </body>
 </html>
